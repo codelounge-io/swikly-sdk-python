@@ -1,9 +1,9 @@
 from swikly import SwiklyClient
 
 client = SwiklyClient(
-    token="YOUR_TOKEN",
+    token="api-B5Qg7JoRTNYJm6PktdfrwJgHfXZ5YzgUfbjKwNkA8112bd1b",
     environment="sandbox",
-    user_agent="MyProject/1.0",
+    user_agent="SwiklySDK/1.0",
 )
 
 accounts = client.accounts.list()
