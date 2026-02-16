@@ -82,14 +82,14 @@ class File(SwiklyModel):
 
 
 class ReclaimSummary(SwiklyModel):
-    reclaimableAmount: Amount
-    plannedRequestedAmount: Amount
-    maximumReclaimCreationDate: DateStr
-    pendingRequestedAmount: Amount
-    pendingReclaimedAmount: Amount
-    reclaimedAmount: Amount
-    estimatedFinishDate: DateStr
-    cancelableAmount: Amount
+    reclaimableAmount: Optional[Amount] = None
+    plannedRequestedAmount: Optional[Amount] = None
+    maximumReclaimCreationDate: Optional[DateStr] = None  # <-- allow null
+    pendingRequestedAmount: Optional[Amount] = None
+    pendingReclaimedAmount: Optional[Amount] = None
+    reclaimedAmount: Optional[Amount] = None
+    estimatedFinishDate: Optional[DateStr] = None  # <-- allow null
+    cancelableAmount: Optional[Amount] = None
     irrecoverableAmount: Optional[Amount] = None
     irrecoverabilityCertificates: Optional[List[File]] = None
 
@@ -103,7 +103,7 @@ class Deposit(SwiklyModel):
     status: str
     startDate: DateStr
     endDate: DateStr
-    expirationDate: DateStr
+    expirationDate: Optional[DateStr] = None  # <-- allow null
     acceptedAt: Optional[DateTimeStr] = None
     releasedAt: Optional[DateTimeStr] = None
     canceledAt: Optional[DateTimeStr] = None
