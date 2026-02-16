@@ -1,7 +1,7 @@
 from swikly import SwiklyClient
 
 client = SwiklyClient(
-    token="api-B5Qg7JoRTNYJm6PktdfrwJgHfXZ5YzgUfbjKwNkA8112bd1b",
+    token="",
     environment="sandbox",
     user_agent="SwiklySDK/1.0",
 )
