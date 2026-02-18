@@ -1,14 +1,14 @@
 from swikly import SwiklyClient
 
 client = SwiklyClient(
-    token="<<PAST_YOUR_API_TOKEN>>",
+    token="<<PAST_TOKEN>>",
     environment="sandbox",
     user_agent="SwiklySDK/1.0",
 )
 
 accounts = client.accounts.list()
 account_id = accounts.accounts[0].id
-
+print("Account ID:", account_id)
 resp = client.requests.create(
     account_id=account_id,
     description="My simple deposit request",
